@@ -50,14 +50,17 @@ class Login extends StatelessWidget {
                 ),
                 ElevatedButton(
                   style: TextButton.styleFrom(
-                    backgroundColor: Colors.amber,
+                    backgroundColor: Colors.green.shade300,
                   ),
                   onPressed: () {
                     print("you hit the login button");
                   },
                   child: Text(
                     "Login now",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                        color: Colors.black87),
                   ),
                 )
               ],
