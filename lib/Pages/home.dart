@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class Home extends StatelessWidget {
-  const Home({super.key});
+  const Home({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
-    company(name: "Infoses", Stipend: 20000);
+    final String name = ModalRoute.of(context)!.settings.arguments as String;
     return Scaffold(
 // top navigation bar
       appBar: AppBar(
@@ -17,7 +19,7 @@ class Home extends StatelessWidget {
       body: Center(
         child: Container(
           child: Text(
-            "Home Screen !!",
+            "Welcome, back $name",
             style: TextStyle(
                 fontSize: 20, color: Colors.blue, fontWeight: FontWeight.bold),
           ),
@@ -25,7 +27,7 @@ class Home extends StatelessWidget {
       ),
 
 // menu ba
-      drawer: Drawer(),
+      // drawer: Drawer(),
     );
   }
 
