@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.system,
       theme: ThemeData(
         // primaryColor: Colors.blue,
@@ -24,7 +24,8 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         MyRoutes.LoginRoutes: (context) => Login(),
-        MyRoutes.HomeRoutes: (context) => new Home(),
+        MyRoutes.HomeRoutes: (context) => Home(),
+        // "/": (context) => Home()
       },
     );
   }

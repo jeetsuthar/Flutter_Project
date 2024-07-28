@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:practice_set_1/widgets/drawer.dart';
 
 class Home extends StatelessWidget {
   const Home({
@@ -12,7 +12,12 @@ class Home extends StatelessWidget {
     return Scaffold(
 // top navigation bar
       appBar: AppBar(
-        title: Text("Flutter Application"),
+        backgroundColor: Colors.white,
+        title: Text(
+          "Google Classroom",
+          style: TextStyle(color: Color.fromARGB(255, 74, 74, 74)),
+        ),
+        elevation: 5.0,
       ),
 
 // body part like HTML file
@@ -21,13 +26,15 @@ class Home extends StatelessWidget {
           child: Text(
             "Welcome, back $name",
             style: TextStyle(
-                fontSize: 20, color: Colors.blue, fontWeight: FontWeight.bold),
+                fontSize: 20,
+                color: Colors.deepPurple,
+                fontWeight: FontWeight.bold),
           ),
         ),
       ),
 
 // menu ba
-      // drawer: Drawer(),
+      drawer: MyDrawer(),
     );
   }
 
